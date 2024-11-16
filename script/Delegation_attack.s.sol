@@ -16,7 +16,6 @@ contract Delegation_attack is Script {
         delegateContract = new Delegate(address(1));
         delegationContract = new Delegation(address(delegateContract));
         vm.stopPrank();
-        
         console.log(delegationContract.owner());
         
         vm.startPrank(address(2));
